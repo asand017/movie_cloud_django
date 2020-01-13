@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
+from .functions import handle_uploaded_file
 from .forms import UploadSrtForm
+
 
 # Create your views here.
 
