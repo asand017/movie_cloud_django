@@ -6,7 +6,7 @@ class CloudReq(models.Model):
 	# word cloud request
 	title = models.CharField(max_length=100)
 	file = models.FileField('film subtitle.srt')#, upload_to='uploads/')
-	cloud_img = models.ImageField()
+	#cloud_img = models.ImageField()
 
 	def __str__(self):
 		return self.film_title
