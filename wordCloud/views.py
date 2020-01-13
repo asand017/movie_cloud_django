@@ -19,7 +19,7 @@ def index(request):
 			# need to verify file 'f' is a srt file
 			
 			srt_to_txt(f)
-			return HttpResponse("Successful upload")
+			#return HttpResponse("Successful upload")
 	else:
 		form = UploadSrtForm()
 
