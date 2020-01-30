@@ -1,6 +1,10 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static "wordCloud/style.css" %}">
+
 <header>
 <h1>Movie Cloud - content check tool</h1>
 </header>
+
 <body>
 <form method="POST" class="post-form" enctype="multipart/form-data">
 	{% csrf_token %}
@@ -8,6 +12,8 @@
 		<button type="submit" class="save btn btn-default">upload</button>
 </form>
 </body>
+
 <!-- <img src="/media/wordCloud/output.png"> -->
-{% load static %}
-<img src="{% static "wordCloud/images/output.png" %}" alt="cloud">
+<div class="cloud-spot">
+	<img src="{% static "wordCloud/images/output.png" %}" alt="cloud">
+</div>
