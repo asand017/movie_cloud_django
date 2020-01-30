@@ -79,7 +79,8 @@ def generate_word_cloud():
 	#plt.imshow(wordcloud.recolor(color_func=black_color_func, random_state=3), interpolation="bilinear")
 	#plt.axis('off')
 	#plt.show()
-	wordcloud.to_file("./wordCloud/static/wordCloud/images/output.png")
+	#wordcloud.to_file("./wordCloud/static/wordCloud/images/output.png")
+	wordcloud.to_file("./media/wordCloud/images/output.png")
 
 def convert_to_srt(f):
 	with open("./wordCloud/static/wordCloud/uploads/subs.srt", "wb+") as output:
