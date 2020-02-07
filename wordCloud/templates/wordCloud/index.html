@@ -1,19 +1,27 @@
-{% load static %}
-<link rel="stylesheet" type="text/css" href="{% static "wordCloud/style.css" %}">
-
-<header>
-<h1>Movie Cloud - content check tool</h1>
-</header>
+<head>
+	{% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static "wordCloud/style.css" %}">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="{% static "wordCloud/js/image_gen.js" %}"></script>
+	<script src="{% static "wordCloud/js/cloud-jquery.js" %}"></script>
+	<header>
+		<h1>Movie Cloud - content check tool</h1>
+	</header>
+</head>
 
 <body>
-<form method="POST" class="post-form" enctype="multipart/form-data">
-	{% csrf_token %}
-	{{ form.as_p }}
-		<button type="submit" class="save btn btn-default">upload</button>
-</form>
+	<form method="POST" class="post-form" enctype="multipart/form-data">
+		{% csrf_token %}
+		{{ form.as_p }}
+			<button type="submit" class="save btn btn-default">upload</button>
+	</form>
+
+	<button id="about-btn">
+		Click me, bitch
+	</button>	
 </body>
 
-<!-- <img src="/media/wordCloud/output.png"> -->
+<!-- <img src="/media/wordCloud/output.png">
 <div class="cloud-spot">
 	<img src="{% static "wordCloud/images/output.png" %}" alt="cloud">
-</div>
+</div> -->
